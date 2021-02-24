@@ -13,5 +13,5 @@ func printConsoleTitle(title string) (int, error)  {
 }
 
 func setConsoleRect(width, height int16) {
-	_, _ = fmt.Fprintf(os.Stdout, "\033[8;%s;%st", strconv.Itoa(int(width)), strconv.Itoa(int(height)))
+	_, _ = fmt.Fprintf(os.Stdout, "\033[8;%s;%st", strconv.Itoa(int(height)), strconv.Itoa(int(width)))
 }
