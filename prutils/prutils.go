@@ -14,6 +14,11 @@ import (
 // IsAbsolute is used to set position of cmd in windows
 var IsAbsolute = true
 
+// init seeds the randomInRange function
+func init() {
+	rand.Seed(time.Now().UnixNano())
+}
+
 // ClipboardCheck Tests if program is capable of clipboard read and write
 func ClipboardCheck() {
 	fmt.Println("[+] Running Clipboard check !")
@@ -80,7 +85,9 @@ func BoolInputValidator(msg string, storage *bool) {
 
 // RandomInRange return a int between upper and lower (both inclusive)
 func RandomInRange(upper, lower int) int {
-	rand.Seed(time.Now().UnixNano())
+	if upper < lower {
+		upper, lower = lower, upper
+	}
 	return (rand.Int() % (upper - lower + 1)) + lower
 }
 
