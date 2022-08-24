@@ -3,8 +3,8 @@ package keyboard
 /*
  #cgo CFLAGS: -x objective-c
  #cgo LDFLAGS: -framework Cocoa
- #import </Applications/Xcode_13.4.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Foundation/Foundation.h>
- #import </Applications/Xcode_13.4.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/ApplicationServices/ApplicationServices.h>
+ #import </Applications/Xcode_13.4.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Versions/C/Headers/Foundation.h>
+ #import </Applications/Xcode_13.4.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Headers/ApplicationServices.h>
  CGEventRef CreateDown(int k){
 	CGEventRef event = CGEventCreateKeyboardEvent (NULL, (CGKeyCode)k, true);
 	return event;
