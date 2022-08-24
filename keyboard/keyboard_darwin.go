@@ -22,7 +22,7 @@ package keyboard
  }
 */
 import "C"
-// import "time"
+import "time"
 
 const (
 	_AShift          = C.kCGEventFlagMaskAlphaShift
@@ -134,7 +134,7 @@ func (k KeyBonding) keyRelease(key int) {
 }
 func (k KeyBonding) tapKey(key int) {
 	k.keyPress(key)
-	// time.Sleep(100 * time.Millisecond) //ignore if speed is most in my test system
+	time.Sleep(50 * time.Millisecond) //ignore if speed is most in my test system
 	k.keyRelease(key)
 }
 
